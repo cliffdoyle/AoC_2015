@@ -11,12 +11,12 @@ import (
 )
 
 func main() {
-	readFile("puzzle.txt")
+	fmt.Println(readFile("puzzle.txt"))
 }
 
 //readFile function opens the file using os.Open function
 //Then reads it line by line using bufio scanner
-func readFile(s string) {
+func readFile(s string) int{
 	// Open the file
 	file, err := os.Open(s)
 	if err != nil {
@@ -63,5 +63,5 @@ func readFile(s string) {
 		//fmt.Println(results)
 		results=nil
 	}
-	fmt.Println(total)
+	return total
 }
